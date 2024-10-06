@@ -2,7 +2,7 @@ import java.util.Locale;
 import java.util.Scanner;
 public class Story {
     public static int story(int day) {
-        int ending_ammount = 25;
+        int ending_ammount = 41;
         int secret_endings = 3;
         int kill_count = 0;
         Scanner userString = new Scanner(System.in);
@@ -277,7 +277,7 @@ public class Story {
                     if (in7.startsWith("Y")) {
                         for (int i = 0; i < 8; i++) {
                             p.print(Video.video(i + 1));
-                            p.print("Continue?  y/n");
+                            p.print("Continue?  [y/n]");
                             in7 = A.input();
                             in7 = in7.toUpperCase();
                             if (in7.startsWith("N"))
@@ -288,7 +288,7 @@ public class Story {
                             {
                                 p.print("Computer tries it's best to continue");
                             }
-                            p.print("Your perspective is very much changed. Every step you take must be taken with caution now. Fear courses through you. Nothing but pure, raw, fear.");
+                        p.print("Your perspective is very much changed. Every step you take must be taken with caution now. Fear courses through you. Nothing but pure, raw, fear.");
                         }
                     }
                     else if(in7.startsWith("N")){
@@ -408,7 +408,7 @@ public class Story {
                         p.print("Ending: \n Blank Stare \n There are " + ending_ammount + " endings");
                         return kill_count;
                     }
-                    p.print("There's a chill in the air as you realize they weren't students, they were Stalkers.\n Scary things in the caves. Maybe it's time to call it quits and head back to campus. y/n");
+                    p.print("There's a chill in the air as you realize they weren't students, they were Stalkers.\n Scary things in the caves. Maybe it's time to call it quits and head back to campus. [y/n]");
                     String in8 = A.input();
                     in8 = in8.toUpperCase();
                     if(in8.startsWith("Y")){
@@ -426,7 +426,7 @@ public class Story {
                     if (in9.startsWith("Y")) {
                         for (int i = 0; i < 8; i++) {
                             p.print(Video.video(i + 1));
-                            p.print("Continue?  y/n");
+                            p.print("Continue?  [y/n]");
                             in9 = A.input();
                             in9 = in9.toUpperCase();
                             if (in9.startsWith("N"))
@@ -475,8 +475,6 @@ public class Story {
                                 return kill_count;
                             }
                         }
-                        p.print("You run out of the cave as fast as you can. Hiding right behind a wall, you watch as the Specter runs right past you and falls over the ledge. \nA distant splash signifies it's gone.");
-
                     }
                     p.print("You make it bridge and look at the view. Below you is the rushing acidic river, most acidic rains funnels into here and goes deeper into the planet. \nHigh above you is the remnants of the Poorly Built Bridge. Good thing you didn't end up taking that one");
                     p.print("You take the measurements you need and head back. You're never coming back to this planet again.");
@@ -498,7 +496,7 @@ public class Story {
                         p.print("Noticing that there's some flora growing through the narrow tunnel. You pull out your blade");
                     }
                     p.print("As you go through the narrow path, your suit is punctured by a thorn. \nYour suit will regenerate but a drop of blood lands on the plant. They're all active now");
-                    p.print("Do you [r]un through the tunnel as fast as possible \n[s]tand absolutely still and hope they won't find you");
+                    p.print("Do you \n[r]un through the tunnel as fast as possible \n[s]tand absolutely still and hope they won't find you");
                     if(redTintedSword){
                         p.print("[m]asacure this plant for even THINKING of attacking you");
                     }
@@ -592,7 +590,7 @@ public class Story {
                     if (in9.startsWith("Y")) {
                         for (int i = 0; i < 8; i++) {
                             p.print(Video.video(i + 1));
-                            p.print("Continue?  y/n");
+                            p.print("Continue?  [y/n]");
                             in9 = A.input();
                             in9 = in9.toUpperCase();
                             if (in9.startsWith("N"))
@@ -627,8 +625,224 @@ public class Story {
         }
         //end of if computer if statement
         //everything else is based off them not having the computer
-        p.print("Alright, now that you have your acidic instruments you head over to the Astro Acidic Falls like the other students had");
-        p.print("");
+        p.print("Alright, now that you have your acidic instruments you head over to the Astro Acidic Falls like the other students had. \nYou catch up to a group of students.They're all chatting about how nice the waterfall will look. ");
+        p.print("Along the way you see the crystallized part of the caves. \n[c]heck out the crystals and break away from \n[k]eep walking with the students");
+        String in3 = A.input();
+        in3 = in3.toUpperCase();
+        if(in3.startsWith("K")){
+            p.print("You keep walking with the students");
+        }
+        //walking with students
+        else if (in3.startsWith("C")){
+            p.print("You walk to the crystals. They look beautiful.");
+            p.print("While looking at crystals you see a purple hard drive sitting on one.");
+            if(computer){
+                p.print("Do you plug in the drive into your computer? [y/n]");
+                String in9 = A.input();
+                in9 = in9.toUpperCase();
+                if (in9.startsWith("Y")) {
+                    for (int i = 0; i < 8; i++) {
+                        p.print(Video.video(i + 1));
+                        p.print("Continue?  [y/n]");
+                        in9 = A.input();
+                        in9 = in9.toUpperCase();
+                        if (in9.startsWith("N"))
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            p.print("Computer tries it's best to continue");
+                        }
+                        p.print("Your perspective is very much changed. Every step you take must be taken with caution now.\n Fear courses through you. Nothing but pure, raw, fear.");
+                    }
+                }
+            }
+            else{
+                p.print("too bad you don't have a computer or you could see what was in it.");
+            }
+            p.print("As you think, you feel the ground shake behind you. It causes the drive to fall into a puddle of acid. \nBehind you a machine is drilling for samples of crystals.");
+            p.print("You look at the machine for a bit, it has a red light on its top. Slowly the red flashing light turns into a solid red. The red turns more Crimson. \nOut from behind the light appears an Specter. It was waiting for you to peer off alone.");
+            p.print("[r]un \n[h]ide ");
+            if(redTintedSword){
+                p.print("[f]ight back");
+            }
+            if(bottleOfTequila||literOfVodka){
+                p.print("[b]urn");
+            }
+            String in4 = A.input();
+            in4 = in4.toUpperCase();
+            if (in4.startsWith("R") || in4.startsWith("B")) {
+                if (in4.startsWith("R")) {
+                    p.print("You run out there as fast as you can. \n You can hear the clicking of the Automaton get louder and louder. Then a loud metal clang. \n[r]ight through a tunnel \n[l]eft straight ahead");
+                    String in5 = A.input();
+                    in5 = in5.toUpperCase();
+                    if (in5.startsWith("R")){
+                        if(mask){
+                            p.print("You go through the tunnel and watch as automaton gets stuck as the tunnel narrows. You get out on the other side.");
+                        }
+                        else{
+                            p.print("You go through the tunnel and watch as automaton gets stuck as the tunnel narrows. \nWhat was this tunnel labeled again? Excess waste gas or something?");
+                            p.print("Ending: \n  Literally Illiterate \n There are " + ending_ammount + " endings");
+                            return kill_count;
+                        }
+                    }
+                }
+                if(in4.startsWith("B")){
+                    p.print("You run out of there as fast as possible. You turn back and throw your bottle at where that where the automaton had stood. \nThe artificially high levels of oxygen in the crystal section create a spectacular fireball. \nWhile it doesn't disable the automaton it does let you escape. ");
+                }
+            }
+            else if (in4.startsWith("F")){
+                p.print("You pull the blade out. Still scared, the blade seems to want something from you. It feels like it's speaking to you. \nToo late for that... \n[s]tab \n[d]odge");
+                String in5 = A.input();
+                in5 = in5.toUpperCase();
+                if (in5.startsWith("S")){
+                    p.print("You try to stab the Automaton, you're too slow. You have one blade, each of the automatons are a blade. You're pierced and turned inside out.");
+                    p.print("Ending: \n  You're Not That Guy Pal \n There are " + ending_ammount + " endings");
+                    return kill_count;
+                }
+                else if(in5.startsWith("D"))
+                {
+                    p.print("You duck, narrowly avoiding the Specter's sharp armed aimed at your neck. As you do the blade cuts the skin on your fingers. \nFew drips of blood edge onto the blade. The name Lucifer Nix glows red. \nIt's bonding with you. You can feel it speak to you");
+                    p.print("Soon there isn't even an Automaton, just a heap of scrap metal. \nEach of it's limbs are cut out, the formly crimson eyes are flickering, and both the processor and nuclear core have been disabled.");
+                    kill_count +=1;
+                }
+
+            }
+            //end of running
+            else if(in4.startsWith("H")){
+                p.print("You hide behind another machine, this one a stationary ground inspector. Wait, didn't the automaton see you hide here? \nA jab to your stomach confirms that indeed it did");
+                p.print("Ending: \n  Hide and Seek 101 \n There are " + ending_ammount + " endings");
+                return kill_count;
+            }
+            p.print("Well now you have no idea where you are, where you're support to go. Or how to get anywhere.");
+            if (computer){
+                p.print("Oh right you have the computer to tell you where to go.");
+                p.print("\n[g]ive up? \n[k]eep going! ");
+                String in6 = A.input();
+                in6 = in6.toUpperCase();
+                if(in6.startsWith("G")){
+                    p.print("You decide to call it quits and just go back the facility. This trip was worthless anyway");
+                    p.print("Ending: \n  The Quiet Quitter \n There are " + ending_ammount + " endings");
+                    return kill_count;
+                }
+            }
+            //if they don't have the computer then they're lost if they do then they go to walking
+            else{
+                p.print("You're lost and I guess it doesn't matter if you get to the research place or not.  \n[l]eft down deeper \n[r]ight stay on the same level");
+                String in6 = A.input();
+                in6 = in6.toUpperCase();
+                if (in6.startsWith("L")){
+                    if(mask){
+                        p.print("You head deeper and lower into the cave system");
+                        p.print("As you head deeper it gets more and more quite. \nThere are no more clicking sounds. You feel at peace... You could stay here for ever.");
+                        p.print("[g]o back, [s]tay");
+                        String in7 = A.input();
+                        in7 = in7.toUpperCase();
+                        if(in7.startsWith("G")){
+                            p.print("This feels wrong. You shouldn't be done here. It's too peaceful. \nYou rush out of the lower part of the cave. You don't know where you're running to. \nThere, who... Where? Nothing... \nThere is no more cave. There is nothing anymore.... Where are you?");
+                            p.print("Everything is a bright blinding white. There is no exit or entrance. You're in some place in between. \nA panel appears before you, as you press the buttons on it you are viewing different parts of the cave as if you were there.\nYou're in a viewing room of sorts. But this wasn't made by the facility. This is too advanced. \nYou watch students walk by, Spectres run through the cave. Here you are everywhere and no where all at once.....");
+                            p.print("[l]eave \n[s]tay");
+                            String in8 = A.input();
+                            in8 = in8.toUpperCase();
+                            if (in8.startsWith("L")){
+                                p.print("This is wrong, you want to leave. You must leave. You know this isn't right. But how do you get out? There's no exit... \nYou take steps back from the panel until you hit a wall. You push it with all your might. You can't get out. \nYou break down, screaming, kicking. Then it happens. A man in a uniform appears with a rail-rifle of sorts. \nAfter some calming words you wake up back in the facility... \nWhat happened?");
+                                if (redTintedSword){
+                                    p.print("Last thing you remember hearing was him saying 'Приятел, where did you find this?'");
+                                    p.print("You still have the blade....");
+                                }
+                                p.print("Ending: \n  Power of Levski \n There are " + ending_ammount + " endings");
+                                return kill_count;
+                            }
+                            else{
+                                p.print("You're too fantasized about the idea of being ubiquitous, omnipresent, and yet so absent. It's intoxicating... \nɎꝋᵾ ꞩⱳīłł ꞩⱦⱥɏ ħēɍē ӻꝋɍēꝟēɍ");
+                                p.print("Ending: \n  The Viewing Room \n There are " + ending_ammount + " endings");
+                                return kill_count;
+                            }
+                        }
+                        else{
+                            p.print("You feel at home here. No busy assignments. Nothing to bother you, no one to distrust you. 𝔶o҉𝔲 𝔰w҉𝔦l҉𝔩 𝔰t҉𝔞y҉ h҉𝔢r҉𝔢 𝔣o҉𝔯e҉𝔳e҉𝔯");
+                            p.print("Ending: \n  Inner Peace \n There are " + ending_ammount + " endings");
+                            return kill_count;
+                        }
+                    }
+                    //End of going deeper in the cave
+                    else{
+                        p.print("You head deeper, but you don't have a mask. Slowly you succumb to the poisonous gas");
+                        p.print("Ending: \n  Eating Air \n There are " + ending_ammount + " endings");
+                        return kill_count;
+                    }
+                }
+                if (in6.startsWith("R")){
+                    p.print("You take a right, staying at roughly the same level as you always have been. \nStaying level with about where you started. You're very very lost... \nYou should just stay in one spot but that doesn't matter anymore. \nAs you walk you see arrows. A very human thing, no other species in Center Fold uses arrows. \n[f]ollow them as you have no other option \n[g]o the opposite direction");
+                    String in7 = A.input();
+                    in7 = in7.toUpperCase();
+                    if(in7.startsWith("F")) {
+                        p.print("With no other option you follow them");
+                        p.print("As reach an extractor of sorts. What is a machine like this doing here? ");
+                        p.print("You see people, speaking, real people. They're messing with the machine. \n[t]alk to them. maybe they'll help \n[s]tay hidden and see what they do");
+                        String in8 = A.input();
+                        in8 = in8.toUpperCase();
+                        if (in8.startsWith("T")){
+                            p.print("As you walk up them, one of them raises a rifle to shoot you. A pellet goes through your arm");
+                            if(redTintedSword){
+                                p.print("It splatters on the blade... It's awakened. It speaks to you. It knows what to do and you follow it. \nYou know where the bullets are going, deflecting them with the blade. No one stands a chance against you. \nThe red coating turns cinnamon, you're unbeatable now. \nSoon the three of them are on the ground, they can't harm you now");
+                                kill_count +=3;
+                            }
+                            else{
+                                p.print("As you're on the ground, one of them makes you kneel, he walks behind you... It's over now");
+                                p.print("Ending: \n  Execution Style \n There are " + ending_ammount + " endings");
+                                return kill_count;
+                            }
+                            p.print("The back of the extractor has a map. You take it and walk back to the facility... \nIt's over now");
+                            p.print("Ending: \n  Terminator \n There are " + ending_ammount + " endings");
+                            return kill_count;
+                        }
+
+                    }
+                    else{
+                        p.print("You go in the opposite direction of the arrows. You don't need them anyway. \nAfter what feels like forever of walking you're nowhere. It feels like you've been walking in circles. \nAfter more forever of walking you realize you HAVE been walking in circles. You haven't seen an Specter, person, or anyone for who knows how long... \nNo food, no water. You're suit only has so much power left. Soon it's acidic protection will wear out.");
+                        p.print("Ending: \n  Invest in Rechargeable Batteries \n There are " + ending_ammount + " endings");
+                        return kill_count;
+                    }
+
+                }
+
+            }
+        }
+        //end of crystals
+        else{
+            p.print("You don't know WHAT to do. You're left behind on your own. Being scared. The fear of being alone breaks you. You died :c \nType correctly next time");
+            p.print("Ending: \n Can't Type \n There are " + ending_ammount + " endings");
+            return kill_count;
+        }
+        p.print("You and the group of students reach the falls. It's just as beautiful as in the video. \n[t]ake the platform to get closer \n[s]tay where you are right now");
+        String in5 = A.input();
+        in5 = in5.toUpperCase();
+        if (in5.startsWith("T")){
+            if(mask){
+                p.print("You take the platform to get closer, you can feel the rushing of the acid flowing down deep into the planet.");
+                p.print("You dot down observations on the arm-pad on your suit.");
+                p.print("The platform moves away from the falls, back to where you were before");
+            }
+            else{
+                p.print("You don't have a mask to protect yourself, slowly the poisonous gas gets to you... \nReality fades away to darkness.");
+                p.print("Ending: \n  Feeling Gassy \n There are " + ending_ammount + " endings");
+                return kill_count;
+            }
+        }
+        else{
+            p.print("You stay where you are. Writing down observations on the arm-pad on your suit.");
+        }
+        p.print("It was beautiful, maybe. Nothing went wrong either.");
+        if(in3.startsWith("K")){
+            p.print("Ending: \n  Perfect Ending \n There are " + ending_ammount + " endings");
+            return kill_count;
+        }
+        else{
+            p.print("What happened...");
+        }
+
 
         return kill_count;
 
